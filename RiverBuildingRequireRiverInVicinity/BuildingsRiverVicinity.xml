@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 10-Sep-16 8:07:15 AM -->
+<GameData>
+	<!-- Created by ModBuddy on 8/13/2016 6:07:36 PM -->
+	<Table name="Building_RequireNearbyRiver">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+	</Table>
+	<!--<Table name="Building_RequireNearbyLake">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+	</Table>-->
+	<Building_RequireNearbyRiver>
+		<!--Water Mill -->
+		<Row>
+			<BuildingType>BUILDING_FLOATING_GARDENS</BuildingType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GARDEN</BuildingType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WATERMILL</BuildingType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HYDRO_PLANT</BuildingType>
+		</Row>
+	</Building_RequireNearbyRiver>
+	<!--<Building_RequireNearbyLake>
+		<Row>
+			<BuildingType>BUILDING_GARDEN</BuildingType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FLOATING_GARDENS</BuildingType>
+		</Row>
+	</Building_RequireNearbyLake>-->
+</GameData>

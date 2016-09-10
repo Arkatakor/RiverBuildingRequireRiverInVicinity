@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="639289f0-6981-4c45-99ce-497974f4dfc9" version="1">
+  <Properties>
+    <Name>BuildingsRiverVicinity</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>Allows buildings that normally require city to be built on the river to still be built as long as there are river tiles within</Teaser>
+    <Description>Allows buildings that normally require city to be built on the river to still be built as long as there are river tiles within the city borders.</Description>
+    <Authors>Arkatakor</Authors>
+    <SpecialThanks>LeeS</SpecialThanks>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>1</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies />
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="BEBF84BB428F677D8DA85539402A6310" import="0">BuildingsLakeVicinity.lua</File>
+    <File md5="25609C38A03A4F416D9BEA9777873A92" import="0">BuildingsRiverAndLakeVicinity.lua</File>
+    <File md5="C7C942E6D5DB402CCF1151C2BB2B7CC4" import="0">BuildingsRiverVicinity.xml</File>
+    <File md5="DF9FD8129DB2CACF41B2093D34A133A4" import="0">Updates.sql</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>Updates.sql</UpdateDatabase>
+      <UpdateDatabase>BuildingsRiverVicinity.xml</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="BuildingsRiverAndLakeVicinity.lua">
+      <Name>BuildingsRiverVicinity</Name>
+      <Description>BuildingsRiverVicinity</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>
