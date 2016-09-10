@@ -5,9 +5,9 @@
 	<Table name="Building_RequireNearbyRiver">
 		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
 	</Table>
-	<!--<Table name="Building_RequireNearbyLake">
+	<Table name="Building_RequireNearbyLake">
 		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-	</Table>-->
+	</Table>
 	<Building_RequireNearbyRiver>
 		<!--Water Mill -->
 		<Row>
@@ -23,12 +23,12 @@
 			<BuildingType>BUILDING_HYDRO_PLANT</BuildingType>
 		</Row>
 	</Building_RequireNearbyRiver>
-	<!--<Building_RequireNearbyLake>
+	<Building_RequireNearbyLake>
 		<Row>
 			<BuildingType>BUILDING_GARDEN</BuildingType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_FLOATING_GARDENS</BuildingType>
 		</Row>
-	</Building_RequireNearbyLake>-->
+	</Building_RequireNearbyLake>
 </GameData>

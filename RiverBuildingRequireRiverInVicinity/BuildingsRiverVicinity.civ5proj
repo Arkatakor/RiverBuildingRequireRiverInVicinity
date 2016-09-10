@@ -12,7 +12,16 @@
 
 I made this mod to facilitate city placement as well as to increase realism.  There is no reason a city needs to be built ON a river just to construct a water mill or a levee.  In real life these buildings are constructed on rivers that are not necessarily inside a city. In fact more often than not, such buildings exist outside of cities.
 
-Special Thanks
+Further to this, AI's get a minor boost since they are horrible at city placement and more often than not found cities close to but not on a river.
+
+The following buildings are affected:
+
+- Garden
+- Floating Gardens (Aztec)
+- Water Mill
+- Hydro Plant
+
+[h1]Special Thanks[/h1]
 
 LeeS.  He effectively did the code that runs this mod.</Description>
     <Authors>Arkatakor</Authors>
@@ -30,12 +39,17 @@ LeeS.  He effectively did the code that runs this mod.</Description>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Updates.sql</FileName>
+        <FileName>RemoveRiverAndFreshwaterTags.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>BuildingsRiverVicinity.xml</FileName>
+        <FileName>BuildingsRiverAndLakeVicinity.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>TextUpdate.sql</FileName>
       </Action>
     </ModActions>
     <ModContent>
@@ -44,6 +58,12 @@ LeeS.  He effectively did the code that runs this mod.</Description>
         <Name>BuildingsRiverVicinity</Name>
         <Description>BuildingsRiverVicinity</Description>
         <FileName>BuildingsRiverVicinity.lua</FileName>
+      </Content>
+      <Content>
+        <Type>InGameUIAddin</Type>
+        <Name>BuildingsLakeVicinity</Name>
+        <Description>BuildingsLakeVicinity</Description>
+        <FileName>BuildingsLakeVicinity.lua</FileName>
       </Content>
     </ModContent>
   </PropertyGroup>
@@ -67,11 +87,15 @@ LeeS.  He effectively did the code that runs this mod.</Description>
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="BuildingsRiverVicinity.xml">
+    <Content Include="BuildingsRiverAndLakeVicinity.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Updates.sql">
+    <Content Include="RemoveRiverAndFreshwaterTags.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="TextUpdate.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

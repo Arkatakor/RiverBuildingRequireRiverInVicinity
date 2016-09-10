@@ -3,7 +3,7 @@
   <Properties>
     <Name>Buildings - River Buildings Require River in Vicinity</Name>
     <Stability>Alpha</Stability>
-    <Teaser>River buildings that normally require city to be built on a river can be built if there are river tiles in city vicinity.</Teaser>
+    <Teaser>River buildings that require city to be built on a river can be built if there are river tiles in city vicinity.</Teaser>
     <Description>Allows buildings that normally require city to be built on the river to still be built as long as there are river tiles within the city borders.
 
 I made this mod to facilitate city placement as well as to increase realism.  There is no reason a city needs to be built ON a river just to construct a water mill or a levee.  In real life these buildings are constructed on rivers that are not necessarily inside a city. In fact more often than not, such buildings exist outside of cities.
@@ -31,19 +31,23 @@ LeeS.  He effectively did the code that runs this mod.</Description>
   <Files>
     <File md5="A2FE8D9E855D12A23AC37AC070A0FA96" import="0">BuildingsLakeVicinity.lua</File>
     <File md5="1FD613FADF5418CDD0E0E3E3A3C85E39" import="0">BuildingsRiverVicinity.lua</File>
-    <File md5="C7C942E6D5DB402CCF1151C2BB2B7CC4" import="0">BuildingsRiverVicinity.xml</File>
-    <File md5="DF9FD8129DB2CACF41B2093D34A133A4" import="0">Updates.sql</File>
+    <File md5="1066D267D42D1C0F86A54B6048925FEF" import="0">BuildingsRiverAndLakeVicinity.xml</File>
+    <File md5="DF9FD8129DB2CACF41B2093D34A133A4" import="0">RemoveRiverAndFreshwaterTags.sql</File>
   </Files>
   <Actions>
     <OnModActivated>
-      <UpdateDatabase>Updates.sql</UpdateDatabase>
-      <UpdateDatabase>BuildingsRiverVicinity.xml</UpdateDatabase>
+      <UpdateDatabase>RemoveRiverAndFreshwaterTags.sql</UpdateDatabase>
+      <UpdateDatabase>BuildingsRiverAndLakeVicinity.xml</UpdateDatabase>
     </OnModActivated>
   </Actions>
   <EntryPoints>
     <EntryPoint type="InGameUIAddin" file="BuildingsRiverVicinity.lua">
       <Name>BuildingsRiverVicinity</Name>
       <Description>BuildingsRiverVicinity</Description>
+    </EntryPoint>
+    <EntryPoint type="InGameUIAddin" file="BuildingsLakeVicinity.lua">
+      <Name>BuildingsLakeVicinity</Name>
+      <Description>BuildingsLakeVicinity</Description>
     </EntryPoint>
   </EntryPoints>
 </Mod>
