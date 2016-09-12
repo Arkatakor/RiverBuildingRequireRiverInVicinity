@@ -5,6 +5,8 @@
 local tBuildingRequireNearbyRiver = {}
 for row in GameInfo.Building_RequireNearbyRiver() do
 	tBuildingRequireNearbyRiver[GameInfoTypes[row.BuildingType]] = true
+	--TODO: figure this out; post in forums; look up lua tables
+	--table.insert(tBuildingRequireNearbyRiver[GameInfoTypes[row.BuildingType]], GameInfoTypes[row.FreshWater])
 end
 function CityHasRiver(pCity)
 	local iNumPlots = pCity:GetNumCityPlots()

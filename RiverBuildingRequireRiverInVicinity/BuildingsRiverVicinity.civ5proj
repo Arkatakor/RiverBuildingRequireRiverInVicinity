@@ -39,17 +39,17 @@ LeeS.  He effectively did the code that runs this mod.</Description>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>RemoveRiverAndFreshwaterTags.sql</FileName>
+        <FileName>UpdateRiverAndFreshwaterTags.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>BuildingsRiverAndLakeVicinity.xml</FileName>
+        <FileName>BuildingsRiverVicinity.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>TextUpdate.sql</FileName>
+        <FileName>UpdateTexts.sql</FileName>
       </Action>
     </ModActions>
     <ModContent>
@@ -58,12 +58,6 @@ LeeS.  He effectively did the code that runs this mod.</Description>
         <Name>BuildingsRiverVicinity</Name>
         <Description>BuildingsRiverVicinity</Description>
         <FileName>BuildingsRiverVicinity.lua</FileName>
-      </Content>
-      <Content>
-        <Type>InGameUIAddin</Type>
-        <Name>BuildingsLakeVicinity</Name>
-        <Description>BuildingsLakeVicinity</Description>
-        <FileName>BuildingsLakeVicinity.lua</FileName>
       </Content>
     </ModContent>
   </PropertyGroup>
@@ -79,23 +73,19 @@ LeeS.  He effectively did the code that runs this mod.</Description>
     <DeployMod>true</DeployMod>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="BuildingsLakeVicinity.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="BuildingsRiverVicinity.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="BuildingsRiverAndLakeVicinity.xml">
+    <Content Include="BuildingsRiverVicinity.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="RemoveRiverAndFreshwaterTags.sql">
+    <Content Include="UpdateRiverAndFreshwaterTags.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="TextUpdate.sql">
+    <Content Include="UpdateTexts.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
