@@ -2,11 +2,11 @@
 <!-- Created by ModBuddy on 10-Sep-16 8:07:15 AM -->
 <GameData>
 	<!-- Created by ModBuddy on 8/13/2016 6:07:36 PM -->
-	<Table name="Building_RequireNearbyRiver">
+	<Table name="Building_RequireNearbyRiverOrLake">
 		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
 		<Column name="FreshWater" type="boolean" default="false"/>
 	</Table>
-	<Building_RequireNearbyRiver>
+	<Building_RequireNearbyRiverOrLake>
 		<!--Water Mill -->
 		<Row>
 			<BuildingType>BUILDING_FLOATING_GARDENS</BuildingType>
@@ -22,5 +22,5 @@
 		<Row>
 			<BuildingType>BUILDING_HYDRO_PLANT</BuildingType>
 		</Row>
-	</Building_RequireNearbyRiver>
+	</Building_RequireNearbyRiverOrLake>
 </GameData>
