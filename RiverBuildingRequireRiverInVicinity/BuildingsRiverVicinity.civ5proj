@@ -6,13 +6,27 @@
     <Name>Buildings - River Buildings Require River in Vicinity</Name>
     <Guid>639289f0-6981-4c45-99ce-497974f4dfc9</Guid>
     <ModVersion>1</ModVersion>
-    <Stability>Alpha</Stability>
+    <Stability>Stable</Stability>
     <Teaser>River buildings that require city to be built on a river can be built if there are river tiles in city vicinity.</Teaser>
-    <Description>Allows buildings that normally require city to be built on the river to still be built as long as there are river tiles within the city borders.
+    <Description>Allows buildings that normally require city to be built on the river or lake to still be built as long as there are river / lake tiles within the city borders.
+
+[h1]Affected Buildings[/h1]
+
+The following can be built with at least one river tile within the city borders:
+
+- Watermill
+- Hydro Plant
+
+The following can be built with at least one river OR lake tile within the city borders:
+
+- Floating Gardens (lake and river in city vicinity)
+- Garden (lake and river in city vicinity)
+
+[h1]Description[/h1]
 
 I made this mod to facilitate city placement as well as to increase realism.  There is no reason a city needs to be built ON a river just to construct a water mill or a levee.  In real life these buildings are constructed on rivers that are not necessarily inside a city. In fact more often than not, such buildings exist outside of cities.
 
-Further to this, AI's get a minor boost since they are horrible at city placement and more often than not found cities close to but not on a river.
+Further to this, AI's get a minor boost since they are horrible at city placement. Often they found cities close to but not on a river.
 
 The following buildings are affected:
 
@@ -23,7 +37,7 @@ The following buildings are affected:
 
 [h1]Special Thanks[/h1]
 
-LeeS.  He effectively did the code that runs this mod.</Description>
+LeeS.  He effectively made the code that runs this mod.  whoward69 was also very helpful.</Description>
     <Authors>Arkatakor</Authors>
     <SpecialThanks>LeeS, whoward69</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
