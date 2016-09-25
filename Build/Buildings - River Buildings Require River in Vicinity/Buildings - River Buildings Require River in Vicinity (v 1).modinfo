@@ -2,17 +2,39 @@
 <Mod id="639289f0-6981-4c45-99ce-497974f4dfc9" version="1">
   <Properties>
     <Name>Buildings - River Buildings Require River in Vicinity</Name>
-    <Stability>Alpha</Stability>
     <Teaser>River buildings that require city to be built on a river can be built if there are river tiles in city vicinity.</Teaser>
-    <Description>Allows buildings that normally require city to be built on the river to still be built as long as there are river tiles within the city borders.
+    <Description>Allows buildings that normally require city to be built on the river or lake to still be built as long as there are river / lake tiles within the city borders.
+
+[h1]Affected Buildings[/h1]
+
+The following can be built with at least one river tile within the city borders:
+
+- Watermill
+- Hydro Plant
+
+The following can be built with at least one river OR lake tile within the city borders:
+
+- Floating Gardens (lake and river in city vicinity)
+- Garden (lake and river in city vicinity)
+
+[h1]Description[/h1]
 
 I made this mod to facilitate city placement as well as to increase realism.  There is no reason a city needs to be built ON a river just to construct a water mill or a levee.  In real life these buildings are constructed on rivers that are not necessarily inside a city. In fact more often than not, such buildings exist outside of cities.
 
-Special Thanks
+Further to this, AI's get a minor boost since they are horrible at city placement. Often they found cities close to but not on a river.
 
-LeeS.  He effectively did the code that runs this mod.</Description>
+The following buildings are affected:
+
+- Garden
+- Floating Gardens (Aztec)
+- Water Mill
+- Hydro Plant
+
+[h1]Special Thanks[/h1]
+
+LeeS.  He effectively made the code that runs this mod.  whoward69 was also very helpful.</Description>
     <Authors>Arkatakor</Authors>
-    <SpecialThanks>LeeS</SpecialThanks>
+    <SpecialThanks>LeeS, whoward69</SpecialThanks>
     <HideSetupGame>0</HideSetupGame>
     <AffectsSavedGames>1</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
@@ -29,25 +51,22 @@ LeeS.  He effectively did the code that runs this mod.</Description>
   <References />
   <Blocks />
   <Files>
-    <File md5="A2FE8D9E855D12A23AC37AC070A0FA96" import="0">BuildingsLakeVicinity.lua</File>
-    <File md5="1FD613FADF5418CDD0E0E3E3A3C85E39" import="0">BuildingsRiverVicinity.lua</File>
-    <File md5="1066D267D42D1C0F86A54B6048925FEF" import="0">BuildingsRiverAndLakeVicinity.xml</File>
-    <File md5="DF9FD8129DB2CACF41B2093D34A133A4" import="0">RemoveRiverAndFreshwaterTags.sql</File>
+    <File md5="4B17E2CBCD442BC7E0452704B72F92A2" import="0">BuildingsRiverVicinity.lua</File>
+    <File md5="E011FD8CBC0F4D9E078BBE60497B86F8" import="0">BuildingsRiverVicinity.xml</File>
+    <File md5="DF9FD8129DB2CACF41B2093D34A133A4" import="0">UpdateRiverAndFreshwaterTags.sql</File>
+    <File md5="51D437C7E02EA7AE2C19C22B15A212BF" import="0">UpdateTexts.sql</File>
   </Files>
   <Actions>
     <OnModActivated>
-      <UpdateDatabase>RemoveRiverAndFreshwaterTags.sql</UpdateDatabase>
-      <UpdateDatabase>BuildingsRiverAndLakeVicinity.xml</UpdateDatabase>
+      <UpdateDatabase>UpdateRiverAndFreshwaterTags.sql</UpdateDatabase>
+      <UpdateDatabase>BuildingsRiverVicinity.xml</UpdateDatabase>
+      <UpdateDatabase>UpdateTexts.sql</UpdateDatabase>
     </OnModActivated>
   </Actions>
   <EntryPoints>
     <EntryPoint type="InGameUIAddin" file="BuildingsRiverVicinity.lua">
       <Name>BuildingsRiverVicinity</Name>
       <Description>BuildingsRiverVicinity</Description>
-    </EntryPoint>
-    <EntryPoint type="InGameUIAddin" file="BuildingsLakeVicinity.lua">
-      <Name>BuildingsLakeVicinity</Name>
-      <Description>BuildingsLakeVicinity</Description>
     </EntryPoint>
   </EntryPoints>
 </Mod>
