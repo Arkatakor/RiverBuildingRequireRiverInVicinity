@@ -51,7 +51,7 @@ LeeS.  He effectively made the code that runs this mod.  whoward69 was also very
   <References />
   <Blocks />
   <Files>
-    <File md5="4B17E2CBCD442BC7E0452704B72F92A2" import="0">BuildingsRiverVicinity.lua</File>
+    <File md5="4496CDFD3D616D0F5E57471AD69861CC" import="0">BuildingsRiverVicinity.lua</File>
     <File md5="E011FD8CBC0F4D9E078BBE60497B86F8" import="0">BuildingsRiverVicinity.xml</File>
     <File md5="DF9FD8129DB2CACF41B2093D34A133A4" import="0">UpdateRiverAndFreshwaterTags.sql</File>
     <File md5="51D437C7E02EA7AE2C19C22B15A212BF" import="0">UpdateTexts.sql</File>
